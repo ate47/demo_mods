@@ -5,16 +5,21 @@
 #using scripts\core_common\array_shared;
 #using scripts\core_common\clientfield_shared;
 
-#namespace zm_demo;
+#namespace demo;
 
+/*
+  load scripts -> autoexec functions
+  init step
+  post init step
+ */
 
 function autoexec __init__system__() {
-    system::register("zm_demo", &__init__, &__main__);
+    system::register("demo", &__init__, &__main__);
+    setgametypesetting(#"drafttime", 2);
 }
 
 function __init__() {
     callback::on_spawned(&on_player_spawned);
-    test = 2;
 }
 
 function __main__() {
@@ -25,38 +30,16 @@ function on_player_spawned() {
     level endon(#"end_game", #"game_ended");
     self endon(#"disconnect", #"spawned_player");
 
-    // CTRL + J
+    wait 10;
 
-    wait 1;
-
-    self val::set(#"zm_demo_lazy", "ignoreme", true);
-
-    self.dqzzdzqdqzd = 2;
-    
-    if (1 + self.dqzzdzqdqzd) {
-        self iprintlnbold("ok !");
-    }
+    c = 0;
 
     while (true) {
-        self.score = 42000;
+      self iprintlnbold("Hello " + c);
 
-        // https://github.com/ate47/t8-atian-menu/blob/master/scripts/core_common/key_mgr.gsc#L146
+      c++;
 
-        if (self meleebuttonpressed()) {
-            self iprintlnbold("Melee !");
-
-            //self takeweapon(self getcurrentweapon());
-            weapon = getweapon(#"ar_accurate_t8"); // ICR-7
-            self giveweapon(weapon);
-            self switchtoweapon(weapon);
-
-            do {
-                waitframe(1);
-            } while (self meleebuttonpressed());
-        }
-
-        waitframe(1);
+      wait 1;
     }
-
 }
 
