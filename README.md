@@ -10,4 +10,4 @@
 ### Part 1
 
 Release : https://github.com/ate47/demo_mods/releases/tag/ep1
-YouTube link : N/A
+YouTube link : https://youtu.be/-eEuGDKdN5I

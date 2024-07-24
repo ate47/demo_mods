@@ -15,13 +15,18 @@
 
 function autoexec __init__system__() {
     system::register("demo", &__init__, &__main__);
+    setgametypesetting(#"drafttime", 2);
 }
 
 function __init__() {
-    
+    callback::on_spawned(&on_player_spawned);
 }
 
 function __main__() {
     
 }
 
+function on_player_spawned() {
+    wait 10;
+    self iprintlnbold("Hello world");
+}
