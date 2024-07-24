@@ -1,5 +1,7 @@
 *.gscc
+*.gscasm
 *.cscc
+*.cscasm
 *.luac
 *.zip
 /build/

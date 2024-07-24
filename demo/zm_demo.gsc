@@ -14,6 +14,7 @@ function autoexec __init__system__() {
 
 function __init__() {
     callback::on_spawned(&on_player_spawned);
+    test = 2;
 }
 
 function __main__() {
@@ -24,9 +25,17 @@ function on_player_spawned() {
     level endon(#"end_game", #"game_ended");
     self endon(#"disconnect", #"spawned_player");
 
+    // CTRL + J
+
     wait 1;
 
     self val::set(#"zm_demo_lazy", "ignoreme", true);
+
+    self.dqzzdzqdqzd = 2;
+    
+    if (1 + self.dqzzdzqdqzd) {
+        self iprintlnbold("ok !");
+    }
 
     while (true) {
         self.score = 42000;
