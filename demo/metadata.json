@@ -1,0 +1,15 @@
+{
+    "name": "Demo",
+    "data": [
+        {
+            "type": "scriptparsetree",
+            "name": "scripts/atian_mods/demo.gsc",
+            "path": "demo.gscc",
+            "hooks": [
+                "scripts/mp_common/bb.gsc"
+            ]
+        }
+    ],
+    "cache": [
+    ]
+}

@@ -1,0 +1,5 @@
+*.gscc
+*.cscc
+*.luac
+*.zip
+/build/
