@@ -16,6 +16,15 @@
             "hooks": [
                 "scripts/zm_common/load.gsc"
             ]
+        },
+        {
+            "type": "scriptparsetree",
+            "name": "scripts/atian_mods/acts_shared_ui.gsc",
+            "path": "acts_shared_ui.gscc",
+            "hooks": [
+                "scripts/mp_common/bb.gsc",
+                "scripts/zm_common/load.gsc"
+            ]
         }
     ],
     "cache": []
