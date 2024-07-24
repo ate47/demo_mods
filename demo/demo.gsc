@@ -27,6 +27,19 @@ function __main__() {
 }
 
 function on_player_spawned() {
+    level endon(#"end_game", #"game_ended");
+    self endon(#"disconnect", #"spawned_player");
+
     wait 10;
-    self iprintlnbold("Hello world");
+
+    c = 0;
+
+    while (true) {
+      self iprintlnbold("Hello " + c);
+
+      c++;
+
+      wait 1;
+    }
 }
+
