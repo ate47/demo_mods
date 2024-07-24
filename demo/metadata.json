@@ -8,8 +8,15 @@
             "hooks": [
                 "scripts/mp_common/bb.gsc"
             ]
+        },
+        {
+            "type": "scriptparsetree",
+            "name": "scripts/atian_mods/zm_demo.gsc",
+            "path": "zm_demo.gscc",
+            "hooks": [
+                "scripts/zm_common/load.gsc"
+            ]
         }
     ],
-    "cache": [
-    ]
+    "cache": []
 }
